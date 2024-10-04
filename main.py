@@ -49,7 +49,7 @@ def main():
     result = result.dropna()
     result.to_csv(args.output_file)
 
-    print('All Done')
+    #print('All Done')
     #print(data)
 
 

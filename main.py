@@ -19,7 +19,7 @@ def main():
                         help='path to save the output of the model')
 
     args = parser.parse_args()
-    print(args.model)
+    #print(args.model)
 
     model = None
     sampling_rate = 100

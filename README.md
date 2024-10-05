@@ -7,5 +7,5 @@
 
 1. Pass the model name, path to input file and path & name of output file.
    ```sh
-   python main.py rf sample/P3_raw.csv results/test_out.csv
+   python main.py models/rf.pkl sample/P3_raw.csv results/test_out.csv
    ```

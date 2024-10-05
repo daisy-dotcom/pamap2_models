@@ -80,7 +80,7 @@ def save_model(model_name, model):
   pickle.dump(model, open(model_path, 'wb'))
 
 def load_model(model_name):
-  model_path = f'models/{model_name}.pkl'
+  model_path = model_name
   return pickle.load(open(model_path, 'rb'))
 
 def rf_windowing(data, window_size=1, sampling_rate=100, f_set='yuan'):

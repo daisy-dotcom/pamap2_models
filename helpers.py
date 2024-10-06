@@ -80,6 +80,7 @@ def save_model(model_name, model):
   pickle.dump(model, open(model_path, 'wb'))
 
 def load_model(model_name):
+  #print(model_name)
   model_path = model_name
   return pickle.load(open(model_path, 'rb'))
 

@@ -1,5 +1,4 @@
 import pandas as pd
-
 from features import *
 from helpers import *
 import argparse
@@ -19,7 +18,9 @@ def main():
                         help='path to save the output of the model')
 
     args = parser.parse_args()
-    #print(args.model)
+    print(args.model)
+    print(args.input_file)
+    print(args.output_file)
 
     model = None
     sampling_rate = 100
@@ -27,6 +28,7 @@ def main():
     window_size = window_size * sampling_rate
 
     try:
+
         model = load_model(args.model)
 
         data = pd.read_csv(args.input_file, header=None)
@@ -49,6 +51,8 @@ def main():
 
     except OSError:
         print("Couldn't load the model/files")
+    except Exception as err:
+        print(f'Error: {err}')
 
     #print('All Done')
     #print(data)

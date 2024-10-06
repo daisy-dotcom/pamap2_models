@@ -1,7 +1,7 @@
 import os
 import numpy as np
 from numpy import linalg as LA
-from pywt import wavedec
+#from pywt import wavedec
 import scipy.stats as stats
 import scipy.signal as signal
 
@@ -133,7 +133,7 @@ def yuan_feature_eng(batch, samp_rate=100, window_size=1):
                              skew, kurtosis, pentropy, f1, f2),axis=None)
 
   return features
-
+'''
 def yaz_feature_eng(batch):
   # time domain features
   # x, y, z mean
@@ -189,3 +189,4 @@ def yuan_yaz(batch, samp_rate=100, window_size=1):
   features = np.concatenate((yuan_features, yaz_features[start_yaz:]),axis=None)
 
   return features
+'''
